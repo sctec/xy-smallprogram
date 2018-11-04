@@ -1,0 +1,47 @@
+<!--pages/sign/sign.wxml-->
+<view class="task-page">
+  <!-- 切换菜单 -->
+  <view class="t-menu">
+    <view class="t-menu-btn {{tabIndex ? '' : 'selected'}}" bindtap="changeTab" id="sendprotocol">
+      <text>发协议</text>
+    </view>
+    <view class="t-menu-btn {{tabIndex ? 'selected' : ''}}" bindtap="changeTab" id="sendfloater">
+      <text>扔瓶子</text>
+    </view>
+  </view>
+</view>
+<view hidden="{{tabIndex==0 ? '' : true}}">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="input-group {{title_focus ? 'active' : ''}}">
+      <input type="text" id="title" value='{{title}}' placeholder="请输入协议标题" bindinput="titleInput" bindfocus="inputFocus" bindblur="inputBlur" />
+    </view>
+    <view class="input-group {{content_focus ? 'active' : ''}}">
+      <textarea type="text" id="content" value='{{content}}' placeholder="请输入协议内容" bindinput="contentInput" bindfocus="inputFocus" bindblur="inputBlur" />
+    </view>
+    <picker bindchange="bindPickerChange" value="{{pick_index}}" range="{{pick_array}}">
+      <view class="picker">
+        签署人数：<text class='people'>{{pick_array[pick_index]}}</text> 人
+      </view>
+    </picker>
+    <view class="share">
+      是否分享：
+      <switch checked="{{share?true:false}}" bindchange="switchChange" id="share" />
+    </view>
+    <view class="confirm-btn" bindtap="bindsign">
+      <text>签署</text>
+    </view>
+  </form>
+</view>
+<view hidden="{{tabIndex==1 ? '' : true}}">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="input-group {{title_focus ? 'active' : ''}}">
+      <input type="text" id="title" value='{{title}}' placeholder="请输入漂流瓶标题" bindinput="titleInput" bindfocus="inputFocus" bindblur="inputBlur" />
+    </view>
+    <view class="input-group {{content_focus ? 'active' : ''}}">
+      <textarea type="text" id="content" value='{{content}}' placeholder="请输入漂流瓶内容" bindinput="contentInput" bindfocus="inputFocus" bindblur="inputBlur" />
+    </view>
+    <view class="confirm-btn" bindtap="bindsignfloater">
+      <text>扔出去</text>
+    </view>
+  </form>
+</view>

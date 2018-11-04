@@ -1,0 +1,57 @@
+<view class="task-page">
+    <!-- 切换菜单 -->
+    <view class="t-menu">
+        <view class="t-menu-btn {{tabIndex ? '' : 'selected'}}" bindtap="changeTab" id="protocol">
+            <text>协议</text>
+        </view>
+        <view class="t-menu-btn {{tabIndex ? 'selected' : ''}}" bindtap="changeTab" id="floater">
+            <text>漂流瓶</text>
+        </view>
+    </view>
+</view>
+<scroll-view scroll-y="true" bindscrolltolower="scrollToLower" class="timeline" hidden="{{tabIndex==0 ? '' : true}}">
+    <view class="tweet-container" wx:for="{{protocols}}" wx:key="_id" data-id="{{item._id}}" bindtap="getDetail">
+        <view class="top-container flex-row">
+            <image class="card-avatar" src="/images/more/issue.png"></image>
+            <view class="user-container">
+                <text class="card-name">{{item.title}}</text>
+                <text class="card-signatory">{{item.signatory}}</text>
+            </view>
+        </view>
+        <view class="middle-container flex-column">
+            <text class="message-text">{{item.content}}</text>
+        </view>
+        <view class="bottom-container flex-row">
+            <view class="bottom-tool flex-row flex-rest-width">
+                <text class="bottom-tool-text">{{item.created_at}}</text>
+            </view>
+            <view class="bottom-tool flex-row flex-rest-width">
+                <text class="bottom-tool-text">{{item.protocol_praise.length}} 赞</text>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<scroll-view scroll-y="true" bindscrolltolower="scrollToLower" class="timeline" hidden="{{tabIndex==1 ? '' : true}}">
+    <view class="tweet-container" id='floaters._id'>
+        <view class="top-container flex-row">
+            <view class="user-container">
+                <text class="card-name floater-title">{{floaters.title}}</text>
+                <text class="card-signatory floater-signatory">{{floaters.signatory}}</text>
+            </view>
+        </view>
+        <view class="middle-container flex-column floater-content">
+            <text class="message-text floater-text">{{floaters.content}}</text>
+        </view>
+        <view class="bottom-container flex-row">
+            <view class="bottom-tool flex-row flex-rest-width">
+                <text class="bottom-tool-text">{{floaters.created_at}}</text>
+            </view>
+            <view class="bottom-tool flex-row flex-rest-width">
+                <text class="bottom-tool-text">来自：{{floaters.region}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="confirm-btn" bindtap="bindsign">
+        <text>签署</text>
+    </view>
+</scroll-view>

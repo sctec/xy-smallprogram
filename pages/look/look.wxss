@@ -1,0 +1,76 @@
+@import "../../styles/card.wxss";
+
+.timeline {
+    height: 100%;
+}
+
+.task-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.t-menu {
+    flex: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    height: 80rpx;
+}
+
+.t-menu-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    font-size: 32 rpx;
+}
+
+.selected {
+    color: #2fcc85;
+    border-bottom: 1px solid #2fcc85;
+}
+
+.protocol_block {
+    border: 1px solid #DCDCDC;
+    padding: 50rpx 30rpx;
+    /* background: #f0f0f0 */
+}
+
+.item_title {
+    font-family: "Arial", "Microsoft YaHei", sans-serif;
+    font-size: 60rpx;
+    font-weight: bolder;
+}
+
+.item_content {
+    font-family: Helvetica;
+    font-size: 45rpx;
+    color: slategrey;
+    padding: 150rpx 50rpx;
+}
+
+.timeline {
+    height: 100%;
+}
+
+.confirm-btn {
+    font-size: 13pt;
+    line-height: 85rpx;
+    height: 85rpx;
+    background: #7acfa6;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    margin: 50rpx 3%;
+}
+
+.confirm-btn:active {
+    opacity: .8;
+}

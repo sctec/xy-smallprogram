@@ -1,0 +1,34 @@
+<!--login.wxml-->
+<view class="container">
+  <view class="remind-box" wx:if="{{remind}}">
+    <!-- <image class="remind-img" src="/images/index/loading.gif"></image> -->
+  </view>
+  <block wx:else>
+    <image class="title" src="/images/more/protocol-logoy.png"></image>
+    <view class="content">
+      <view class="hd" style="transform:rotateZ({{angle}}deg);">
+          <image class="wave" src="/images/more/wave.png" mode="aspectFill"></image>
+          <image class="wave wave-bg" src="/images/more/wave.png" mode="aspectFill"></image>
+      </view>
+      <view class="bd" >
+        <form class="login-form">
+          <view class="input-group {{username_focus ? 'active' : ''}}">
+            <text class="input-label">帐号</text>
+            <input type="text" id="username" placeholder="请输入用户名" bindinput="usernameInput" bindfocus="inputFocus" bindblur="inputBlur" />
+          </view>
+          <view class="input-group {{password_focus ? 'active' : ''}}">
+            <text class="input-label">密码</text>
+            <input password="true" id="password" placeholder="请输入密码" bindinput="passwordInput" bindfocus="inputFocus" bindblur="inputBlur" />
+          </view>
+          <view class="login-help">
+            <navigator url="/pages/signin/signin" hover-class="navigator-hover">立即注册</navigator>
+          </view>
+        </form>
+        <view class="confirm-btn" bindtap="bind">
+            <text>登录</text>
+        </view>
+      </view>
+    </view>
+  </block>
+
+</view>

@@ -1,0 +1,32 @@
+<view class="detail-container">
+  <view class="auto-container">
+    <image class="auto-img" src="/images/touxiang.png"></image>
+    <text class="auto-name">{{signatory}}</text>
+    <view class='qianshuyu'>
+    <text class="const-text">签署于</text>
+    <text class="pub-time">{{time}}</text>
+    </view>
+    
+  </view>
+  <text class="title">{{title}}</text>
+  <view class="operation-container">
+    <view class="operation-imgs" bindtap="onCollectedTap">
+    <!-- <view class="operation-imgs" bindtap="onCollectedTap"> -->
+      <image wx:if="true" class="collection-img" src="/images/icon/collection.png"></image>
+      <image wx:else class="collection-img" src="/images/icon/collection-anti.png"></image>
+      <image class="share-img" catchtap="onShareTap" src="/images/icon/share.png"></image>
+      <!-- <image class="share-img" catchtap="onShareTap" src="/images/icon/share.png"></image> -->
+    </view>
+    <view class="horizon-line"></view>
+  </view>
+  <text class="details-content">{{content}}</text>
+  <view class='detail-option'>
+    <view class='detail-argu'>
+      <view>评论数：{{protocol_comments}}</view>
+    </view>
+    <view class='detail-agree'>
+      <image wx:if="{{praise}}" class="praise-img" src="/images/icon/star.png" bindtap='changestar'></image>
+      <image wx:else class="praise-img" src="/images/icon/chat.png" bindtap='changestar'></image>
+    </view>
+  </view>
+</view>

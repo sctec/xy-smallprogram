@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/detail/detail",
+    "pages/look/look",
+    "pages/success/success",
+    "pages/share/share",
+    "pages/sign/sign",
+    "pages/signin/signin",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/my/my",
+    "pages/xiugaiziliao/xiugaiziliao"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#7acfa6",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "协易",
+    "backgroundColor": "#7acfa6",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#b2b2b2",
+    "selectedColor": "#2fcc85",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/look/look",
+        "text": "看一下",
+        "iconPath": "images/tab/task_unselected.png",
+        "selectedIconPath": "images/tab/task_selected.png"
+      },
+      {
+        "pagePath": "pages/sign/sign",
+        "text": "签一下",
+        "iconPath": "images/tab/add_unselected.png",
+        "selectedIconPath": "images/tab/add_selected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/tab/my_unselected.png",
+        "selectedIconPath": "images/tab/my_selected.png"
+      }
+    ]
+  }
+}

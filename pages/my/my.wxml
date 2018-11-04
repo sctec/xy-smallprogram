@@ -1,0 +1,29 @@
+<!--pages/my/my.wxml-->
+<view class="personal_info">
+  <view class="photo_wrap">
+    <image src="/images/touxiang.png" class="photo"></image>
+  </view>
+  <view class="nickname">
+    {{userInfo.nickName}}
+  </view>
+</view>
+<view class="wode_item_wrap">
+  <view class="wode_item">
+    我的协议
+		<span class=" arrow_wrap ">></span>
+	</view>
+  <view class="wode_item">
+    我的漂流瓶
+    <span class="arrow_wrap">></span>
+  </view>
+  <view class="wode_item">
+		意见反馈
+		<span class=" arrow_wrap ">></span>
+	</view>
+  <view class="wode_item" bindtap='xiugaiziliao'>
+  <!-- <view class="wode_item" bindtap='xiugaiziliao'> -->
+    修改资料
+    <span class="arrow_wrap">></span>
+  </view>
+</view>
+<view bindtap='wode_out' class="wode_out">退出登录</view>

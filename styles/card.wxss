@@ -1,0 +1,75 @@
+.tweet-container {
+  background-color: white;
+  margin: 20rpx;
+  border-radius: 4rpx;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+.top-container {
+  padding: 15rpx;
+  border-bottom: 1rpx solid #e1e1e1;
+  display: flex;
+  flex-direction: row;
+}
+.user-container {
+  display: flex;
+  flex-direction: column;
+}
+.card-avatar {
+  /* background-color: #c8c8c8; */
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 8rpx;
+  margin-right: 60rpx
+}
+
+.card-signatory {
+  font-size: 20rpx;
+  color: #8999a5;
+  margin-top: 6rpx;
+}
+.floater-signatory{
+  font-size: 30rpx;
+  color: #8999a5;
+  margin-top: 6rpx;
+}
+.card-name {
+  color: #ff9630;
+  font-weight: bold;
+  font-size: 32rpx;
+  /* margin-top: 8rpx; */
+}
+.floater-title{
+  color: #ff9630;
+  font-weight: bold;
+  font-size: 42rpx;
+  margin-top: 8rpx;
+}
+.middle-container {
+  padding: 16rpx;
+  height: 80rpx;
+  border-bottom: 1rpx solid #e1e1e1;
+}
+
+.message-text{
+  color: #333;
+  font-size: 26rpx;
+  line-height: 34rpx;
+}
+.message-image {
+  width: 100%;
+  margin-top: 16rpx;
+  background-color: #e1e1e1;   
+}
+.floater-text{
+  font-size: 32rpx;
+}
+.bottom-container {
+  height: 66rpx;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-around;
+}
+.bottom-tool-text {
+  color: #6D6D78;
+  font-size: 26rpx;
+}

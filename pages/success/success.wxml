@@ -1,0 +1,34 @@
+<!--pages/success/sucess.wxml-->
+<!-- 创建成功 -->
+<view class="success">
+
+  <view class="tit">
+    <text>创建成功!</text>
+  </view>
+
+  <view class="panel">
+    <view class="task-img">
+      <image class="pic" src="../../images/xieyi/icon_complete_green@3x.png"></image>
+    </view>
+
+    <view class="task-name">
+      <text>{{title}}</text>
+    </view>
+    <view class="intro">
+      <text>{{content}}</text>
+    </view>
+    <view class="tips">
+      <text>{{tip}}</text>
+    </view>
+    <view class="dot-line">
+      <image src="../../images/xieyi/dot-line.png"></image>
+    </view>
+    <view class="code">
+      <text class='fengxiang'>分 享</text>
+    </view>
+  </view>
+
+  <view class="close" bindtap="bindClose">
+    <image src="../../images/xieyi/success-close.png"></image>
+  </view>
+</view>

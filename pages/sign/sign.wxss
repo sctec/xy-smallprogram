@@ -1,0 +1,95 @@
+/* pages/sign/sign.wxss */
+
+.task-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.t-menu {
+  flex: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  height: 80rpx;
+}
+
+.t-menu-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  font-size: 32 rpx;
+}
+
+.selected {
+  color: #2fcc85;
+  border-bottom: 1px solid #2fcc85;
+}
+
+/*发协议*/
+
+form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.input-group,.picker{
+  display: flex;
+  align-items: center;
+  padding: 25rpx 10rpx;
+  margin: 40rpx 3%;
+  background: #e9faed;
+  border-radius: 5px;
+  border: 2px solid #e9faed;
+  transition: all 0.15s ease-in-out;
+}
+.picker{
+  background: #ffffff;
+  border: none
+}
+.people {
+  padding: 0rpx 50rpx;
+  /* margin: 40rpx 3%; */
+  background: #e9faed;
+  border-radius: 5px;
+  border: 2px solid #e9faed;
+  transition: all 0.15s ease-in-out;
+}
+
+.share {
+  padding: 25rpx 10rpx;
+  margin: 40rpx 3%;
+}
+
+.input-group.active {
+  border: 2px solid #7acfa6;
+}
+
+.input-placeholder, .textarea-placeholder {
+  color: #ccc;
+}
+
+.confirm-btn {
+  font-size: 13pt;
+  line-height: 85rpx;
+  height: 85rpx;
+  background: #7acfa6;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  margin: 50rpx 3%;
+}
+
+.confirm-btn:active {
+  opacity: 0.8;
+}
